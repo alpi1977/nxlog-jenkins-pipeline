@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  database:
+    image: mysql:5.7
+    container_name: database
+    environment:
+      MYSQL_ROOT_PASSWORD: MyMYSQLPassword_1
+      MYSQL_USER: projectuser
+      MYSQL_PASSWORD: Projectpassword_1
+      MYSQL_DATABASE: bookstore_db
+    networks:
+      - projectnet
+
+  myapp:
+    image: aozkan1977/bookstore:latest
+    container_name: myapp
+    restart: always
+    depends_on:
+      - database
+    ports:
+      - "80:80"
+    networks:
+      - projectnet
+
+networks:
+  projectnet:
+    driver: bridge
