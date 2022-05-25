@@ -58,7 +58,7 @@ A user chooses:
 $ git clone <https link of your new GitHub repository> 
 ```
 
-- Copy all the files (except Jenkins server's terraform and script files) created in Part 1 to your local repo/directory
+- Copy all the files created in Part 1 to your local repo/directory
 
 - Push all the files to your GitHub repo:
   
