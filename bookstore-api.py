@@ -134,11 +134,11 @@ def remove_book(book):
     return True if row is None else False
 
 
-# Write a function named `home` which returns 'Welcome to the Developer's Bookstore API Service V1',
+# Write a function named `home` which returns 'Welcome to the Developer's Bookstore API Service',
 # and assign to the static route of ('/')
 @app.route('/')
 def home():
-    return "Welcome to Developer's Bookstore API Service V1"
+    return "Welcome to Developer's Bookstore API Service"
 
 # Write a function named `get_books` which returns all books in JSON format for `GET`,
 # and assign to the static route of ('/books')
